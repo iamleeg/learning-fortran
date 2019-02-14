@@ -4,7 +4,7 @@ program avg
   implicit none
   interface
      function average(count, numbers)
-       integer :: count
+       integer, intent(in) :: count
        real, intent(in) :: numbers(:)
        real average
      end function average
@@ -35,5 +35,3 @@ function average(count, numbers)
   end do
   average = sum/count
 end function average
-
-  
